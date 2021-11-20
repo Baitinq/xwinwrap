@@ -1,6 +1,6 @@
 # Xwinwrap
 
-My fork of xwinwrap.  
+My fork of xwinwrap. (With some added settings)
 Xwinwrap allows you to stick most of the apps to your desktop background.  
 My use case - can use gif as a background
 
@@ -38,16 +38,15 @@ Options:
              -sh     - Shape of window (choose between rectangle, circle or triangle. Default is rectangle)
              -ov     - Set override_redirect flag (For seamless desktop background integration in non-fullscreenmode)
              -d      - Daemonize
+             -r      - Assume the root window is the desktop
              -debug  - Enable debug messages
 ```
 Example
-`xwinwrap -g 400x400 -ni -s -nf -b -un -argb -sh circle -- gifview -w WID mygif.gif -a`
+`xwinwrap -g 400x400 -ni -s -nf -b -r -un -argb -sh circle -- gifview -w WID mygif.gif -a`
 
 ### Changes
 
-* Added ability to make undecorated window
-* Changed how desktop window is found
-* Refactored window hints
+* Added the -r setting
 
 ----
 Original source - https://launchpad.net/xwinwrap
